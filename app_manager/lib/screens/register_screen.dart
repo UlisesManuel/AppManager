@@ -1,21 +1,94 @@
 import 'package:flutter/material.dart';
+import '../database/database_helper.dart';
 
-class RegisterScreen extends StatelessWidget {
+class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
+
+  @override
+  State<RegisterScreen> createState() => _RegisterScreenState();
+}
+
+class _RegisterScreenState extends State<RegisterScreen> {
+
+  final TextEditingController usernameController =
+      TextEditingController();
+
+  final TextEditingController emailController =
+      TextEditingController();
+
+  final TextEditingController passwordController =
+      TextEditingController();
+
+  final TextEditingController confirmPasswordController =
+      TextEditingController();
+
+  Future<void> guardarUsuario() async {
+
+    if (usernameController.text.isEmpty ||
+        emailController.text.isEmpty ||
+        passwordController.text.isEmpty ||
+        confirmPasswordController.text.isEmpty) {
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Complete todos los campos'),
+        ),
+      );
+      return;
+    }
+
+    if (passwordController.text !=
+        confirmPasswordController.text) {
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Las contraseñas no coinciden'),
+        ),
+      );
+      return;
+    }
+
+    try {
+      await DatabaseHelper.instance.insertUser({
+        'username': usernameController.text,
+        'email': emailController.text,
+        'password': passwordController.text,
+      });
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Usuario registrado correctamente'),
+        ),
+      );
+
+      Navigator.pop(context);
+
+    } catch (e) {
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Error: $e'),
+        ),
+      );
+
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Registro"),
+        title: const Text('Registro'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: ListView(
           children: [
+
             TextField(
-              decoration: InputDecoration(
-                labelText: "Nombre de usuario",
+              controller: usernameController,
+              decoration: const InputDecoration(
+                labelText: 'Nombre de usuario',
                 border: OutlineInputBorder(),
               ),
             ),
@@ -23,8 +96,9 @@ class RegisterScreen extends StatelessWidget {
             const SizedBox(height: 15),
 
             TextField(
-              decoration: InputDecoration(
-                labelText: "Correo electrónico",
+              controller: emailController,
+              decoration: const InputDecoration(
+                labelText: 'Correo electrónico',
                 border: OutlineInputBorder(),
               ),
             ),
@@ -32,9 +106,10 @@ class RegisterScreen extends StatelessWidget {
             const SizedBox(height: 15),
 
             TextField(
+              controller: passwordController,
               obscureText: true,
-              decoration: InputDecoration(
-                labelText: "Contraseña maestra",
+              decoration: const InputDecoration(
+                labelText: 'Contraseña maestra',
                 border: OutlineInputBorder(),
               ),
             ),
@@ -42,18 +117,22 @@ class RegisterScreen extends StatelessWidget {
             const SizedBox(height: 15),
 
             TextField(
+              controller: confirmPasswordController,
               obscureText: true,
-              decoration: InputDecoration(
-                labelText: "Confirmar contraseña",
+              decoration: const InputDecoration(
+                labelText: 'Confirmar contraseña',
                 border: OutlineInputBorder(),
               ),
             ),
 
-            const SizedBox(height: 20),
+            const SizedBox(height: 25),
 
-            ElevatedButton(
-              onPressed: () {},
-              child: const Text("Crear Cuenta"),
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                onPressed: guardarUsuario,
+                child: const Text('Crear Cuenta'),
+              ),
             ),
           ],
         ),
