@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'register_screen.dart';
+import 'home_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -52,11 +53,18 @@ class LoginScreen extends StatelessWidget {
             const SizedBox(height: 20),
 
             SizedBox(
-              width: double.infinity,
-              child: ElevatedButton(
-                onPressed: () {},
+            width: double.infinity,
+            child: ElevatedButton(
+                onPressed: () {
+                Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                    builder: (context) => const HomeScreen(),
+                    ),
+                );
+                },
                 child: const Text('Iniciar Sesión'),
-              ),
+            ),
             ),
 
             TextButton(
