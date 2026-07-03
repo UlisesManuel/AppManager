@@ -124,8 +124,8 @@ CREATE TABLE credenciales(
 
 # 👨‍💻 Autor
 
-Ulises Manuel García Ramos
-Kevin Emanuel Pérez Espina
+**Ulises Manuel García Ramos**
+**Kevin Emanuel Pérez Espina**
 
 
 # 🧾 Nota Académica
