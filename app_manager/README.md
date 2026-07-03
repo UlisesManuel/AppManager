@@ -68,11 +68,17 @@ Base de Datos Local
 
 # Seguridad del Sistema
 
-- Autenticación con correo y contraseña.
-- Uso de contraseña maestra para acceso a datos sensibles.
-- Aislamiento de datos por usuario mediante `usuario_id`.
-- Validación antes de mostrar contraseñas almacenadas.
+La aplicación implementa diversas medidas de seguridad:
 
+- Inicio de sesión mediante **nombre de usuario** y contraseña maestra.
+- Acceso aislado a las credenciales mediante `usuario_id`.
+- Validación de contraseña actual antes de modificar datos sensibles.
+- Recuperación de cuenta mediante cuatro preguntas de seguridad.
+- Las respuestas de seguridad se almacenan automáticamente:
+  - En minúsculas.
+  - Sin acentos.
+- Toda la información permanece almacenada localmente.
+- No existe conexión con servidores externos ni almacenamiento en la nube.
 
 # Tecnologías Utilizadas
 
@@ -122,12 +128,55 @@ CREATE TABLE credenciales(
 );
 ```
 
-# 👨‍💻 Autor
+# Instalación
+
+## Requisitos
+
+- Flutter SDK 3.0 o superior.
+- Dart SDK 3.0 o superior.
+- Android Studio o Visual Studio Code.
+- Dispositivo Android o emulador.
+
+## Clonar el proyecto
+
+```bash
+git clone https://github.com/UlisesManuel/AppManager.git
+cd app_manager
+```
+
+## Instalar dependencias
+
+```bash
+flutter pub get
+```
+
+## Ejecutar la aplicación
+
+```bash
+flutter run
+```
+
+---
+
+# Dependencias principales
+
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+
+  sqflite:
+  path:
+  diacritic:
+```
+
+
+# Autor
 
 **Ulises Manuel García Ramos**
 **Kevin Emanuel Pérez Espina**
 
 
-# 🧾 Nota Académica
+# Nota Académica
 
 Proyecto desarrollado con fines educativos como parte de la evaluación de desarrollo de aplicaciones móviles, cumpliendo con los requerimientos de persistencia local, arquitectura en capas e interfaz de usuario en Flutter.
