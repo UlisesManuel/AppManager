@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'register_screen.dart';
 import 'home_screen.dart';
-// Ruta exacta según tu estructura de carpetas
-import 'package:app_manager/database/database_helper.dart'; 
+import 'forgot_password_screen.dart';
+import 'package:app_manager/database/database_helper.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -12,68 +12,69 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  // 1. Controladores para capturar el texto
-  final _emailController = TextEditingController();
+  // Controladores
+  final _usernameController = TextEditingController();
   final _passwordController = TextEditingController();
-  
-  // Clave global para la validación del formulario de Flutter
+
+  // Clave del formulario
   final _formKey = GlobalKey<FormState>();
   bool _isLoading = false;
 
   @override
   void dispose() {
-    // Liberamos los controladores para evitar fugas de memoria
-    _emailController.dispose();
+    _usernameController.dispose();
     _passwordController.dispose();
     super.dispose();
   }
 
-  // Lógica principal: Validación en SQLite y control de acceso
+  // Lógica de inicio de sesión
   Future<void> _handleLogin() async {
-    // Si los campos de texto no pasan la validación visual, no hace nada
     if (!_formKey.currentState!.validate()) return;
 
     setState(() {
-      _isLoading = true; // Muestra el círculo de carga y desactiva el botón
+      _isLoading = true;
     });
 
-    final email = _emailController.text.trim();
+    final username = _usernameController.text.trim();
     final password = _passwordController.text;
 
     try {
-      // 3. Consulta directa a tu base de datos SQLite real
-      final user = await DatabaseHelper.instance.login(email, password);
+      // Por ahora solo cambiamos el nombre de la variable.
+      // Después modificaremos DatabaseHelper para que busque por username.
+      final user = await DatabaseHelper.instance.login(username, password);
 
       setState(() {
         _isLoading = false;
       });
 
       if (user != null) {
-        final int usuarioId = user['id']; // Capturamos el id del mapa
+        final int usuarioId = user['id'];
+
         if (mounted) {
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-              builder: (context) => HomeScreen(usuarioId: usuarioId), // <-- Lo enviamos aquí
+              builder: (context) => HomeScreen(usuarioId: usuarioId),
             ),
           );
         }
       } else {
-        // 4. Las credenciales no coinciden en la base de datos (retornó null)
-        _showErrorSnackBar('Correo o contraseña maestra incorrectos');
+        _showErrorSnackBar(
+          'Nombre de usuario o contraseña maestra incorrectos',
+        );
       }
-
-      
     } catch (e) {
       setState(() {
         _isLoading = false;
       });
+
       _showErrorSnackBar('Error al conectar con la base de datos local');
     }
   }
 
   void _showErrorSnackBar(String message) {
     if (!mounted) return;
+
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(message),
@@ -90,7 +91,6 @@ class _LoginScreenState extends State<LoginScreen> {
       appBar: AppBar(
         title: const Text('App Manager'),
       ),
-      // SingleChildScrollView evita el error de desbordamiento de píxeles al abrir el teclado
       body: Center(
         child: SingleChildScrollView(
           child: Padding(
@@ -101,36 +101,39 @@ class _LoginScreenState extends State<LoginScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Icon(
-                    Icons.lock_outline, 
-                    size: 100, 
-                    color: Colors.blueGrey
+                    Icons.lock_outline,
+                    size: 100,
+                    color: Colors.blueGrey,
                   ),
                   const SizedBox(height: 20),
+
                   const Text(
                     'Iniciar Sesión',
-                    style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontSize: 28,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
+
                   const SizedBox(height: 30),
 
-                  // Campo: Correo Electrónico
+                  // Campo: Nombre de usuario
                   TextFormField(
-                    controller: _emailController,
-                    keyboardType: TextInputType.emailAddress,
+                    controller: _usernameController,
+                    keyboardType: TextInputType.text,
                     decoration: const InputDecoration(
-                      labelText: 'Correo electrónico',
-                      prefixIcon: Icon(Icons.email_outlined),
+                      labelText: 'Nombre de usuario',
+                      prefixIcon: Icon(Icons.person_outline),
                       border: OutlineInputBorder(),
                     ),
                     validator: (value) {
                       if (value == null || value.trim().isEmpty) {
-                        return 'Por favor, ingresa tu correo';
-                      }
-                      if (!value.contains('@')) {
-                        return 'Ingresa un formato de correo válido';
+                        return 'Por favor, ingresa tu nombre de usuario';
                       }
                       return null;
                     },
                   ),
+
                   const SizedBox(height: 15),
 
                   // Campo: Contraseña Maestra
@@ -149,9 +152,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       return null;
                     },
                   ),
+
                   const SizedBox(height: 25),
 
-                  // Botón de acción con indicador de carga
                   SizedBox(
                     width: double.infinity,
                     height: 50,
@@ -172,8 +175,8 @@ class _LoginScreenState extends State<LoginScreen> {
                               ),
                             )
                           : const Text(
-                              'Iniciar Sesión', 
-                              style: TextStyle(fontSize: 16)
+                              'Iniciar Sesión',
+                              style: TextStyle(fontSize: 16),
                             ),
                     ),
                   ),
@@ -185,11 +188,31 @@ class _LoginScreenState extends State<LoginScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const RegisterScreen()
+                          builder: (context) =>
+                              const ForgotPasswordScreen(),
                         ),
                       );
                     },
-                    child: const Text('¿No tienes cuenta? Regístrate aquí'),
+                    child: const Text(
+                      '¿Olvidaste tu contraseña maestra?',
+                    ),
+                  ),
+
+                  const SizedBox(height: 5),
+
+                  TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              const RegisterScreen(),
+                        ),
+                      );
+                    },
+                    child: const Text(
+                      '¿No tienes cuenta? Regístrate aquí',
+                    ),
                   ),
                 ],
               ),
@@ -199,4 +222,4 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
     );
   }
-}
+} 

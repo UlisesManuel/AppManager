@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<indexing>
+ <object alt="" name="Imagen1" object_type="graphic"/>
+ <object alt="" name="Imagen2" object_type="graphic"/>
+ <paragraph index="12" node_type="writer">		AppManager</paragraph>
+ <paragraph index="15" node_type="writer">						</paragraph>
+ <object alt="" name="Imagen3" object_type="graphic"/>
+ <object alt="" name="Imagen4" object_type="graphic"/>
+ <object alt="" name="Imagen5" object_type="graphic"/>
+ <object alt="" name="Imagen6" object_type="graphic"/>
+ <object alt="" name="Imagen7" object_type="graphic"/>
+ <object alt="" name="Imagen8" object_type="graphic"/>
+ <object alt="" name="Imagen9" object_type="graphic"/>
+ <object alt="" name="Imagen10" object_type="graphic"/>
+ <object alt="" name="Imagen11" object_type="graphic"/>
+ <object alt="" name="Imagen12" object_type="graphic"/>
+ <object alt="" name="Imagen13" object_type="graphic"/>
+ <paragraph index="51" node_type="writer">Figura : Solicitud de instalación</paragraph>
+ <paragraph index="54" node_type="writer">Figura : Habilitar permisos</paragraph>
+ <paragraph index="57" node_type="writer">Figura : Instalación completada</paragraph>
+ <paragraph index="60" node_type="writer">Figura : Pantalla de inicio de sesión</paragraph>
+ <paragraph index="63" node_type="writer">Figura : Pantalla de registro</paragraph>
+ <paragraph index="66" node_type="writer">Figura : Pantalla de preguntas de seguridad</paragraph>
+ <paragraph index="69" node_type="writer">Figura : Pantalla principal</paragraph>
+ <paragraph index="72" node_type="writer">Figura : Pantalla de registro de preguntas de seguridad</paragraph>
+ <paragraph index="75" node_type="writer">Figura : Pantalla de información de la cuenta</paragraph>
+ <paragraph index="78" node_type="writer">Figura : Pantalla de registro de nueva contraseña</paragraph>
+ <paragraph index="81" node_type="writer">Figura : Gestion de contraseña</paragraph>
+ <paragraph index="84" node_type="writer">Figura : Pantalla para gestionar contraseñas</paragraph>
+ <object index="91" name="Sumario1" object_type="section"/>
+ <object index="92" name="Sumario1_Head" object_type="section"/>
+ <paragraph index="93" node_type="writer" parent_index="92">Indice</paragraph>
+ <paragraph index="95" node_type="writer" parent_index="91">Introducción	3</paragraph>
+ <paragraph index="96" node_type="writer" parent_index="91">Descripción General del Sistema	4</paragraph>
+ <paragraph index="97" node_type="writer" parent_index="91">¿Qué es AppManager?	4</paragraph>
+ <paragraph index="98" node_type="writer" parent_index="91">Características Principales	4</paragraph>
+ <paragraph index="99" node_type="writer" parent_index="91">Objetivo del Sistema	4</paragraph>
+ <paragraph index="100" node_type="writer" parent_index="91">Requisitos del Sistema	5</paragraph>
+ <paragraph index="101" node_type="writer" parent_index="91">Requisitos del Hardware	5</paragraph>
+ <paragraph index="102" node_type="writer" parent_index="91">Requisitos de Software	5</paragraph>
+ <paragraph index="103" node_type="writer" parent_index="91">Requisitos para el Usuario	5</paragraph>
+ <paragraph index="104" node_type="writer" parent_index="91">Instalación	6</paragraph>
+ <paragraph index="105" node_type="writer" parent_index="91">Descarga de la Aplicación	6</paragraph>
+ <paragraph index="106" node_type="writer" parent_index="91">Instalación de la Aplicación	6</paragraph>
+ <paragraph index="107" node_type="writer" parent_index="91">Inicio y Funcionalidades de AppManager	8</paragraph>
+ <paragraph index="108" node_type="writer" parent_index="91">Pantallas de registro e inicio de sesión	8</paragraph>
+ <paragraph index="109" node_type="writer" parent_index="91">Manejo de pantalla principal	10</paragraph>
+ <paragraph index="110" node_type="writer" parent_index="91">Creación de contraseñas	12</paragraph>
+ <paragraph index="111" node_type="writer" parent_index="91">Eliminar, modificar y consultar contraseñas	13</paragraph>
+ <paragraph index="112" node_type="writer" parent_index="91">Solución de Problemas	15</paragraph>
+ <paragraph index="113" node_type="writer" parent_index="91">Conclusión	16</paragraph>
+ <paragraph index="116" node_type="writer">Introducción</paragraph>
+ <paragraph index="117" node_type="writer">La creciente cantidad de aplicaciones, redes sociales y sitios web que requieren credenciales de acceso hace necesario contar con una herramienta que permita administrar esta información de forma segura. Por ello, se desarrolló AppManager, una aplicación móvil creada en Flutter cuyo propósito es almacenar y gestionar contraseñas de manera organizada y protegida.</paragraph>
+ <paragraph index="118" node_type="writer">La aplicación incorpora un sistema de autenticación mediante una contraseña maestra, la cual brinda una capa adicional de seguridad al momento de consultar, modificar o eliminar las contraseñas almacenadas. Asimismo, permite registrar usuarios, recuperar el acceso mediante correo electrónico y generar contraseñas seguras para diferentes servicios.</paragraph>
+ <paragraph index="119" node_type="writer">Este manual tiene como finalidad guiar al usuario en la instalación, configuración y utilización de todas las funciones disponibles dentro de la aplicación.</paragraph>
+ <paragraph index="121" node_type="writer">Descripción General del Sistema</paragraph>
+ <paragraph index="122" node_type="writer">¿Qué es AppManager?</paragraph>
+ <paragraph index="123" node_type="writer">AppManager es una aplicación móvil desarrollada en Flutter que permite a los usuarios almacenar de forma segura las credenciales de acceso de aplicaciones, redes sociales y sitios web. El sistema centraliza la información de acceso en un único lugar, facilitando su consulta y administración mediante mecanismos de seguridad que protegen la información almacenada.</paragraph>
+ <paragraph index="124" node_type="writer">Características Principales</paragraph>
+ <paragraph index="125" node_type="writer">La aplicación ofrece las siguientes funcionalidades:</paragraph>
+ <paragraph index="126" node_type="writer">Registro de usuarios mediante nombre de usuario, correo electrónico y contraseña.</paragraph>
+ <paragraph index="127" node_type="writer">Autenticación mediante contraseña maestra.</paragraph>
+ <paragraph index="128" node_type="writer">Almacenamiento seguro de contraseñas de aplicaciones, redes sociales y sitios web.</paragraph>
+ <paragraph index="129" node_type="writer">Consulta de credenciales almacenadas.</paragraph>
+ <paragraph index="130" node_type="writer">Modificación de registros protegida mediante contraseña maestra.</paragraph>
+ <paragraph index="131" node_type="writer">Eliminación de registros protegida mediante contraseña maestra.</paragraph>
+ <paragraph index="132" node_type="writer">Recuperación de acceso.</paragraph>
+ <paragraph index="133" node_type="writer">Generación automática de contraseñas seguras.</paragraph>
+ <paragraph index="135" node_type="writer">Objetivo del Sistema</paragraph>
+ <paragraph index="136" node_type="writer">Proporcionar una herramienta segura y sencilla que permita a los usuarios gestionar sus credenciales digitales, reduciendo el riesgo de pérdida de información y mejorando la organización de sus cuentas en diferentes plataformas.</paragraph>
+ <paragraph index="137" node_type="writer">Requisitos del Sistema </paragraph>
+ <paragraph index="138" node_type="writer">Requisitos del Hardware</paragraph>
+ <paragraph index="139" node_type="writer">Para utilizar AppManager se recomienda contar con:</paragraph>
+ <paragraph index="140" node_type="writer">Dispositivo móvil Android.</paragraph>
+ <paragraph index="141" node_type="writer">Mínimo 2 GB de memoria RAM.</paragraph>
+ <paragraph index="142" node_type="writer">Al menos 160 MB de espacio libre de almacenamiento.</paragraph>
+ <paragraph index="143" node_type="writer">Pantalla táctil funcional.</paragraph>
+ <paragraph index="145" node_type="writer">Requisitos de Software</paragraph>
+ <paragraph index="146" node_type="writer">Sistema operativo Android 8.0 o superior.</paragraph>
+ <paragraph index="147" node_type="writer">Aplicación instalada mediante archivo APK.</paragraph>
+ <paragraph index="148" node_type="writer">Permisos de almacenamiento requeridos por la aplicación.</paragraph>
+ <paragraph index="150" node_type="writer">Requisitos para el Usuario</paragraph>
+ <paragraph index="151" node_type="writer">El usuario deberá:</paragraph>
+ <paragraph index="152" node_type="writer">Crear una cuenta proporcionando nombre de usuario, correo electrónico y contraseña.</paragraph>
+ <paragraph index="153" node_type="writer">Configurar una contraseña maestra para proteger el acceso a las credenciales almacenadas.</paragraph>
+ <paragraph index="154" node_type="writer">Conservar el acceso al correo electrónico registrado para poder realizar procesos de recuperación de contraseña en caso de olvido.</paragraph>
+ <paragraph index="155" node_type="writer">Instalación</paragraph>
+ <paragraph index="156" node_type="writer">Descarga de la Aplicación</paragraph>
+ <paragraph index="157" node_type="writer">La aplicación AppManager se distribuye mediante un archivo APK alojado en Google Drive. Para obtener la aplicación, el usuario deberá acceder al siguiente enlace de descarga https://drive.google.com/file/d/1_18mYnsX6UKxaD9Rqh3_q8W6Fse-Fpfe/view?usp=sharing y descargar el archivo APK en su dispositivo Android.</paragraph>
+ <paragraph index="158" node_type="writer">Instalación de la Aplicación</paragraph>
+ <paragraph index="159" node_type="writer">Una vez descargado el archivo APK, se deberán seguir los siguientes pasos:</paragraph>
+ <paragraph index="160" node_type="writer">Al instante de acceder al enlace proporcionado el archivo pedirá ser instalado en el dispositivo móvil. </paragraph>
+ <paragraph index="169" node_type="writer">Si es la primera vez que se instala una aplicación desde una fuente externa, habilitar la opción de instalación desde orígenes desconocidos cuando el sistema lo solicite. Seleccionamos instalar de todas formas. </paragraph>
+ <paragraph index="183" node_type="writer">Confirmar la instalación. </paragraph>
+ <paragraph index="184" node_type="writer">Esperar a que el proceso finalice correctamente. </paragraph>
+ <paragraph index="185" node_type="writer">Abrir la aplicación AppManager desde el menú de aplicaciones del dispositivo.</paragraph>
+ <paragraph index="187" node_type="writer">Inicio y Funcionalidades de AppManager</paragraph>
+ <paragraph index="188" node_type="writer">Hola querido usuario soy AppManager soy una aplicación que gestiona tus contraseñas personales de diferentes aplicaciones, sitios web y/o redes sociales. A continuación veras todas las funcionalidades que tengo.</paragraph>
+ <paragraph index="189" node_type="writer">Pantallas de registro e inicio de sesión</paragraph>
+ <paragraph index="190" node_type="writer">Aquí encontraras la pantalla principal que te aparecerá al entrar a la aplicación.</paragraph>
+ <paragraph index="192" node_type="writer"> </paragraph>
+ <paragraph index="207" node_type="writer"> </paragraph>
+ <paragraph index="208" node_type="writer"> </paragraph>
+ <paragraph index="209" node_type="writer"> </paragraph>
+ <paragraph index="210" node_type="writer">Manejo de pantalla principal</paragraph>
+ <paragraph index="211" node_type="writer">Hola aquí veremos las pantallas que veras al iniciar sesión. A continuación se da un manual de instrucciones de que podemos hacer en esta pantalla.</paragraph>
+ <paragraph index="212" node_type="writer"> </paragraph>
+ <paragraph index="213" node_type="writer"> </paragraph>
+ <paragraph index="215" node_type="writer"> </paragraph>
+ <paragraph index="218" node_type="writer">    </paragraph>
+ <paragraph index="236" node_type="writer">Creación de contraseñas</paragraph>
+ <paragraph index="237" node_type="writer">En la ventana principal encontraremos un botón con el símbolo de “+” en el cual al dar clic podremos agregar una nueva contraseña.</paragraph>
+ <paragraph index="239" node_type="writer"> </paragraph>
+ <paragraph index="252" node_type="writer">Eliminar, modificar y consultar contraseñas</paragraph>
+ <paragraph index="253" node_type="writer">Con la contraseña guardada ahora podremos gestionar la contraseña.  </paragraph>
+ <paragraph index="256" node_type="writer"> </paragraph>
+ <paragraph index="278" node_type="writer">En cualquiera de las tres acciones que se seleccionen siempre pedirá la contraseña maestra de la aplicación para reforzar la seguridad. Eso a sido todas mis funcionalidades y espero que el anterior manual te haya sido de utilidad</paragraph>
+ <paragraph index="280" node_type="writer">Solución de Problemas</paragraph>
+ <paragraph index="281" node_type="writer">En caso de presentarse algún inconveniente durante el uso de la aplicación, se recomienda consultar la siguiente tabla:</paragraph>
+ <paragraph index="282" node_type="writer">  </paragraph>
+ <paragraph index="283" node_type="writer">Tabla : Posibles problemas</paragraph>
+ <object index="284" name="Tabla1" object_type="table"/>
+ <paragraph index="286" node_type="writer" parent_index="284">Problema</paragraph>
+ <paragraph index="289" node_type="writer" parent_index="284">Posible Solución</paragraph>
+ <paragraph index="292" node_type="writer" parent_index="284">La aplicación no se instala.</paragraph>
+ <paragraph index="295" node_type="writer" parent_index="284">Verificar que el archivo APK se haya descargado correctamente y que se permita la instalación desde fuentes externas.</paragraph>
+ <paragraph index="298" node_type="writer" parent_index="284">No es posible iniciar sesión.</paragraph>
+ <paragraph index="301" node_type="writer" parent_index="284">Comprobar que el nombre de usuario y la contraseña sean correctos.</paragraph>
+ <paragraph index="304" node_type="writer" parent_index="284">Olvidé mi contraseña.</paragraph>
+ <paragraph index="307" node_type="writer" parent_index="284">Utilizar la opción de recuperación mediante correo electrónico.</paragraph>
+ <paragraph index="310" node_type="writer" parent_index="284">No puedo modificar una contraseña almacenada.</paragraph>
+ <paragraph index="313" node_type="writer" parent_index="284">Verificar que se esté ingresando correctamente la contraseña maestra.</paragraph>
+ <paragraph index="316" node_type="writer" parent_index="284">No puedo eliminar un registro.</paragraph>
+ <paragraph index="319" node_type="writer" parent_index="284">Confirmar que la contraseña maestra sea válida.</paragraph>
+ <paragraph index="322" node_type="writer" parent_index="284">La aplicación se cierra inesperadamente.</paragraph>
+ <paragraph index="325" node_type="writer" parent_index="284">Reiniciar la aplicación o reinstalar la versión más reciente disponible.</paragraph>
+ <paragraph index="328" node_type="writer" parent_index="284">No aparecen las contraseñas guardadas.</paragraph>
+ <paragraph index="331" node_type="writer" parent_index="284">Comprobar que se haya iniciado sesión con la cuenta correcta.</paragraph>
+ <paragraph index="335" node_type="writer">Conclusión</paragraph>
+ <paragraph index="336" node_type="writer">AppManager proporciona una solución práctica y segura para la gestión de credenciales de acceso utilizadas en aplicaciones, redes sociales y sitios web. Gracias al uso de una contraseña maestra, la información almacenada cuenta con una capa adicional de protección que ayuda a preservar la privacidad y seguridad del usuario. Además de permitir el almacenamiento de credenciales, la aplicación facilita su administración mediante funciones de consulta, modificación y eliminación, así como mecanismos de recuperación de acceso y generación de contraseñas seguras. El desarrollo de este proyecto permitió aplicar conocimientos de programación móvil con Flutter, bases de datos locales y diseño de interfaces de usuario, dando como resultado una herramienta funcional orientada a mejorar la organización y seguridad de la información digital de los usuarios.</paragraph>
+ <object name="Marco de texto 1" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 1">Ingreso del nombre de usuario</paragraph>
+ <object name="Marco de texto 2" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 2">Ingreso de contraseña</paragraph>
+ <object name="Forma 3" alt="" object_type="shape" description=""/>
+ <object name="Forma 4" alt="" object_type="shape" description=""/>
+ <object name="Forma 5" alt="" object_type="shape" description=""/>
+ <object name="Forma 6" alt="" object_type="shape" description=""/>
+ <object name="Marco de texto 4" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 4">Enlace para recuperacón en caso de olvidar la contraseña</paragraph>
+ <object name="Forma 7" alt="" object_type="shape" description=""/>
+ <object name="Marco de texto 5" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 5">Enlace de para registrarse en caso de no tener cuenta</paragraph>
+ <object name="Forma 9" alt="" object_type="shape" description=""/>
+ <object name="Marco de texto 6" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 6">Ingreso del nombre de usuario</paragraph>
+ <object name="Marco de texto 7" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 7">Ingreso el correo eléctronico</paragraph>
+ <object name="Forma 10" alt="" object_type="shape" description=""/>
+ <object name="Marco de texto 8" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 8">Ingreso de una contraseña</paragraph>
+ <object name="Forma 11" alt="" object_type="shape" description=""/>
+ <object name="Marco de texto 9" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 9">Confirmación de la contraseña</paragraph>
+ <object name="Forma 12" alt="" object_type="shape" description=""/>
+ <object name="Marco de texto 10" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 10">Botón para crear la cuenta</paragraph>
+ <object name="Marco de texto 11" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 11">Boton para inciar sesión</paragraph>
+ <object name="Forma 1" alt="" object_type="shape" description=""/>
+ <object name="Marco de texto 3" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 3">Aqui puedes seleccionar que pregunta de seguridad responder para la recuperación.</paragraph>
+ <object name="Forma 2" alt="" object_type="shape" description=""/>
+ <object name="Marco de texto 12" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 12">Botón para recuperar el acceso</paragraph>
+ <object name="Forma 13" alt="" object_type="shape" description=""/>
+ <object name="Marco de texto 13" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 13">Botón para resfrescar la pantalla</paragraph>
+ <object name="Forma 14" alt="" object_type="shape" description=""/>
+ <object name="Marco de texto 14" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 14">Apartado para seleccionar las preguntas de seguridad y sus respectivas respuestas</paragraph>
+ <object name="Forma 15" alt="" object_type="shape" description=""/>
+ <object name="Marco de texto 15" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 15">Edición de perfil, aquí puedes cambiar tu nombre de usuario, correo eléctronico y tu contraseña</paragraph>
+ <object name="Forma 16" alt="" object_type="shape" description=""/>
+ <object name="Marco de texto 16" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 16">Espacio donde se muestran las contraseñas gurdadas.</paragraph>
+ <object name="Marco de texto 17" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 17">Botón para registrar una contraseña nueva</paragraph>
+ <object name="Forma 17" alt="" object_type="shape" description=""/>
+ <object name="Forma 18" alt="" object_type="shape" description=""/>
+ <object name="Marco de texto 18" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 18">Apartado para asignarle una respuesta a las preguntas de seguridad</paragraph>
+ <object name="Forma 19" alt="" object_type="shape" description=""/>
+ <object name="Marco de texto 19" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 19">Botón para guardar las respuestas</paragraph>
+ <object name="Forma 20" alt="" object_type="shape" description=""/>
+ <object name="Marco de texto 20" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 20">Espacio para modificar le nombre de usuario actual</paragraph>
+ <object name="Forma 21" alt="" object_type="shape" description=""/>
+ <object name="Marco de texto 21" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 21">Espacio para modificar le email actual</paragraph>
+ <object name="Forma 22" alt="" object_type="shape" description=""/>
+ <object name="Marco de texto 22" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 22">Espacio para modificar la contraseña</paragraph>
+ <object name="Forma 23" alt="" object_type="shape" description=""/>
+ <object name="Marco de texto 23" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 23">Ingreso de la contraseña actual para validar la modificación</paragraph>
+ <object name="Forma 24" alt="" object_type="shape" description=""/>
+ <object name="Marco de texto 24" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 24">Botón para guardar los cambios</paragraph>
+ <object name="Marco de texto 25" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 25">Espacio para indicar el nombre del sitio o aplicación</paragraph>
+ <object name="Forma 25" alt="" object_type="shape" description=""/>
+ <object name="Forma 26" alt="" object_type="shape" description=""/>
+ <object name="Marco de texto 26" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 26">Espacio para asignar el usuario del sitio o aplicación</paragraph>
+ <object name="Forma 27" alt="" object_type="shape" description=""/>
+ <object name="Marco de texto 27" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 27">Espacio para ingresar la contraseña</paragraph>
+ <object name="Forma 28" alt="" object_type="shape" description=""/>
+ <object name="Marco de texto 28" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 28">Botón que genera contraseñas seguras automaticamente</paragraph>
+ <object name="Forma 29" alt="" object_type="shape" description=""/>
+ <object name="Marco de texto 29" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 29">Botón para activar la visualización de la contraseña</paragraph>
+ <object name="Forma 30" alt="" object_type="shape" description=""/>
+ <object name="Marco de texto 30" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 30">Botón para guardar los cambios</paragraph>
+ <object name="Forma 31" alt="" object_type="shape" description=""/>
+ <object name="Marco de texto 31" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 31">Botón/tarjeta para gestionar la contraseñas</paragraph>
+ <object name="Forma 32" alt="" object_type="shape" description=""/>
+ <object name="Marco de texto 32" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 32">Mensaje de éxito al guardar una nueva contraseña</paragraph>
+ <object name="Forma 33" alt="" object_type="shape" description=""/>
+ <object name="Marco de texto 33" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 33">Información del sitio, o aplicación guardada</paragraph>
+ <object name="Forma 34" alt="" object_type="shape" description=""/>
+ <object name="Forma 35" alt="" object_type="shape" description=""/>
+ <object name="Forma 36" alt="" object_type="shape" description=""/>
+ <object name="Marco de texto 34" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 34">Botón para editar la contraseña</paragraph>
+ <object name="Marco de texto 35" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 35">Botón para ver la contraseña</paragraph>
+ <object name="Marco de texto 36" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 36">Botón para eliminar la contraseña</paragraph>
+ <object name="Marco de texto 37" alt="" object_type="shape" description=""/>
+ <paragraph index="0" node_type="common" object_name="Marco de texto 37">En caso de que hayas olvidado tu contraseña</paragraph>
+ <object name="Forma 37" alt="" object_type="shape" description=""/>
+</indexing>
